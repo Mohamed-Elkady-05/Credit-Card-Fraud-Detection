@@ -1,0 +1,19 @@
+Credit-Card-Fraud-Detection/
+├── data/
+│   ├── raw/                           # Raw creditcard.csv (git-ignored)
+│   └── processed/                     # Scaled & split arrays (.npy / .parquet)
+├── notebooks/
+│   ├── 01_eda_and_baseline.ipynb     # Dev B: EDA, PCA correlations & baseline RF
+│   ├── 02_smote_resampling.ipynb     # Dev A: SMOTE/ADASYN experiments
+│   ├── 03_class_weighting.ipynb      # Dev B: Cost-sensitive RF & XGBoost
+│   └── 04_benchmark_synthesis.ipynb  # Joint: Comparison, PR curves & final metrics
+├── src/
+│   ├── __init__.py
+│   ├── data_prep.py                   # Dev A: Stratified split & RobustScaler
+│   ├── resampling.py                  # Dev A: Oversampling pipelines
+│   ├── models.py                      # Dev B: Class-weighted model wrappers
+│   └── evaluation.py                  # Dev B: PR-AUC & Cost-Matrix scoring
+├── .gitignore                         # Ignores data/ raw files, virtualenvs, cache
+├── LICENSE                            # MIT License
+├── README.md                          # Main repository documentation
+└── requirements.txt                   # Dependency list

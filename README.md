@@ -30,17 +30,15 @@ This project systematically benchmarks strategies for handling extreme class imb
 3. **Threshold Optimization:** Shifting decision cutoffs below `0.50` to minimize business-critical False Negatives (uncaught fraud).
 
 ---
-
 ## Benchmark Results
 
 | Model / Approach | Precision | Recall | PR-AUC | ROC-AUC |
 | :--- | :--- | :--- | :--- | :--- |
-| Baseline (Unadjusted Random Forest) | -- | -- | -- | -- |
-| SMOTE + Random Forest | -- | -- | -- | -- |
+| Baseline (Unadjusted Random Forest) | 0.9412 | 0.8163 | 0.8734 | 0.9630 |
+| SMOTE (0.05) + Random Forest | 0.9140 | 0.8673 | **0.8802** | 0.9648 |
 | Class-Weighted Random Forest | -- | -- | -- | -- |
 | Class-Weighted XGBoost | -- | -- | -- | -- |
-| **Threshold-Tuned Model (Final)** | **--** | **--** | **--** | **--** |
-
+| **Threshold-Tuned Model (SMOTE @ 0.30 Cutoff)** | **0.7373** | **0.8878** | **0.8802** | **0.9648** |
 ---
 
 ## Dataset
